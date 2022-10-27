@@ -1,0 +1,146 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "cc0f30b0",
+   "metadata": {},
+   "source": [
+    "#### INTERACTIVE DASHBOARD\n",
+    "- Utilização por meio de um app.py\n",
+    "- Dashboard on pagehome: localhost\n",
+    "        Pode ser um problema (bloqueio da rede)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c927f13a",
+   "metadata": {},
+   "source": [
+    "### GITHUB\n",
+    "\n",
+    "[YT - Repositório Sven-Bo](https://github.com/Sven-Bo/streamlit-sales-dashboard)\n",
+    "\n",
+    "[Vídeo do YouTube](https://www.youtube.com/watch?v=Sb0A9i6d320)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "a781e41e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "16f29619",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import plotly.expless as px\n",
+    "import streamlit as st"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "28167712",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'st' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "\u001b[1;32m~\\AppData\\Local\\Temp\\ipykernel_4904\\553979494.py\u001b[0m in \u001b[0;36m<module>\u001b[1;34m\u001b[0m\n\u001b[1;32m----> 1\u001b[1;33m st.set_page_config(page_title = 'Cmarg001 Media Dashboard',\n\u001b[0m\u001b[0;32m      2\u001b[0m                   \u001b[0mpage_icon\u001b[0m \u001b[1;33m=\u001b[0m \u001b[1;34m'bar_chart: '\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m      3\u001b[0m                   layout = 'wide')\n\u001b[0;32m      4\u001b[0m \u001b[1;31m#Modify layout\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m      5\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;31mNameError\u001b[0m: name 'st' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "st.set_page_config(page_title = 'Cmarg001 Media Dashboard',\n",
+    "                  page_icon = 'bar_chart: ',\n",
+    "                  layout = 'wide')\n",
+    "#Modify layout\n",
+    "\n",
+    "df = pd.read_excel(\n",
+    "io = 'cmarg001-med',\n",
+    "engine = 'openpyxl',\n",
+    "sheet_name = 'cmarg med - Sudeste',\n",
+    "skiprows = 0,\n",
+    "usecols = 'R:R',\n",
+    "nrows = 10001\n",
+    ")\n",
+    "\n",
+    "\n",
+    "st.dataframe(df)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "49c11dbb",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "de282d41",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "78c1dd25",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1f37e57f",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "dcd259b9",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

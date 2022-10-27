@@ -1,0 +1,25 @@
+ARQUIVO CMARG MED
+
+* Não possue patamar
+* Arquivo de saida
+* Colunas: séries, anos, meses, média
+* Acon não possue média
+* Excluir os dados estatísticos
+* Redefinir o index
+* Adicionar os anos
+* Alterar a posição da coluna anos
+* Adicionar o submercado
+
+-----------------------------------
+Tratar as informações
+
+* Anos
+- Tratar os dados dos anos
+	years = np.array([['ANO:', '2022'], ['ANO:', '2023']...
+	anos1 = np.array([2022, 2023, 2024, 2025, 2026])
+
+- Cabeçalho
+* Submercado
+
+- Importar excel
+- Importar csv
